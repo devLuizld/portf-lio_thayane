@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio - Thayane</title>
+  <link rel="icon" href="favicon.ico" type="image/png" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2913/2913469.png" type="image/png">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: azure;
+      margin: 0;
+      padding: 0;
+      color: #000000;
+    }
+
+    h1, h2 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    header {
+      background-image: linear-gradient(#116214,#135813,#0a390a);
+
+
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header img  {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid rgb(125, 197, 210);
+      margin-top: 10px;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 30px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #94ddf3; 
+    }
+    
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #67c367;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .project {
+      width: 280px;
+      cursor: pointer;
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .project-images {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      height: 200px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 8px;
+      border: 5px solid rgb(125, 197, 210);
+      border-radius: 20px;
+    }
+
+    .project-images img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .project-images .hover-img {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 2s ease, transform 2s ease;
+      z-index: 2;
+    }
+
+    .project-images:hover .hover-img {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      z-index: 2;
+    }
+
+    .project-images:hover img:not(.hover-img) {
+      opacity: 0;
+      transform: scale(0.2);
+    }
+
+    .project-caption {
+      font-weight: 600;
+      color: #349534;
+      font-size: 1rem;
+    }
+
+    .courses ul, .exp ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .courses li, .exp li {
+      background: #7bb987;
+      margin: 10px 0;
+      padding: 10px;
+      border-left: 4px solid #349534;
+      border-radius: 4px;
+      border: solid rgb(125, 197, 210);
+    }
+
+    footer {
+      text-align: center;
+      background-image: linear-gradient(#116214,#135813,#0a390a);
+
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .social-icons a {
+        font-size: 20px;
+      }
+
+      .projects {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .project {
+        width: 90%;
+      }
+    }
+
+    /* Botão animado */
+    .botao-hover {
+      background: #0066cc;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .botao-hover::after {
+      content: "Vamos lá!";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #004999;
+      width: 100%;
+      height: 100%;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .botao-hover:hover::after {
+      transform: translateY(0);
+    }
+
+    .botao-hover:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Thayane Steinbach campos maia</h1>
+    <p> Enfermeira</p>
+    <img src="WhatsApp Image 2025-07-09 at 10.13.15.jpeg">
+    <div class="social-icons">
+      <a href="https://wa.me/5521964539412" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.linkedin.com/in/thayane-steinbach-6288b0167?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:thayanescm@yahoo.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="about">
+      <h2>Sobre Mim</h2>
+      <p>Meu nome é Thayane Steinbach Campos Maia, nascida em 16 de fevereiro de 1998. Sou bacharel em Enfermagem pelo IBMR (2021) e possuo diversas especializações, incluindo UTI, Enfermagem Obstétrica, Estratégia da Família e Saúde da Mulher (em andamento). Atuei em instituições como o Hospital Municipal Miguel Couto e a Maternidade Carmela Dutra, além de experiência em home care. Também realizei cursos focados em emergências obstétricas, neonatais, cardíacas e atendimento pré-hospitalar, sempre com dedicação ao cuidado humanizado e técnico de qualidade.
+
+      </p>
+
+      <button class="botao-hover" onclick="document.getElementById('exp').scrollIntoView({ behavior: 'smooth' })">MINHAS EXPERIÊNCIAS</button>
+    </section>
+
+    <section class="projects">
+      <h2>Artigos publicados</h2>
+      <div class="projects">
+        <div class="project">
+          <div class="project-images">
+            <img src="imagem artigo1.webp" alt="Projeto 1">
+            <img class="hover-img" src="artigo.jpeg" alt="Hover Projeto 1">
+          </div>
+          <div class="project-caption">
+            <a href="https://rsdjournal.org/index.php/rsd/article/view/5169" target="_blank">
+              Domínio da utilização de metodologias ativas por estudantes de graduação em Enfermagem
+            </a>
+          </div>
+          
+        </div>
+        <div class="project">
+          <div class="project-images">
+            <img src="imagem artigo1.webp" alt="Projeto 2">
+            <img class="hover-img" src="artigo_cancer.jpeg" alt="Hover Projeto 2">
+          </div>
+          <div class="project-caption">
+            <a href="https://rsdjournal.org/index.php/rsd/article/view/10877" target="_blank">
+             Enfermagem diante do câncer de colo uterino
+            </a>
+          </div> </div>
+        </div>
+      
+    </section>
+
+    <section class="courses">
+      <h2>formação</h2>
+      <ul>
+        <li>Bacharel em enfermagem DEZ/2021 (IBMR)</li>
+        <li>Pós-Graduação em uti JUN/2023 (FACULDADE FUTURA)</li>
+        <li>Pós-Graduação em enfermagem obstétrica DEZ/2023 (FABA)</li>
+        <li>Pós-Graduação em estratégia da família MAI/2024 (DNA)</li>
+        <li>Pós-Graduação em enfermagem em saúde da mulher (cursando) </li>
+      </ul>
+    </section>
+    <section class="courses">
+      <h2>Cursos realizados</h2>
+      <ul>
+        <li>Intercorrências obstétricas - 200h</li>
+        <li>Emergência no CTI Neonatal e Pediátrico - 200h</li>
+        <li>Emergência no CTI cardíaco - 200h</li>
+        <li>Socorrista (APH) - 80h</li>
+      </ul>
+    </section>
+    
+    <section class="exp" id="exp"> 
+      <h2>Experiência Profissional</h2>
+      <ul>
+        <li>Estágio MAI/21 - DEZ/2021 - Hospital Miguel couto</li>
+        <li>Enfermeira home care FEV/2022 - JUL/2023</li>
+        <li>Estágio AGO/ 2023 - OUT/2023 - Hospital maternidade Carmela dutra</li>
+      
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Thayane Steinbach campos maia</p>
+  </footer>
+
+</body>
+</html>
